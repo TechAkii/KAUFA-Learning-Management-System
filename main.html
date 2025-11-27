@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KAUFA - Learning Management System</title>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="2.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="mail-location">
+            <i class="fa-regular fa-envelope"></i>&nbsp; info@cdi.com
+            &nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-location-dot"></i>&nbsp; Sirisewana, Bentota, Sri Lanka
+        </div>
+
+        <div class="header-buttons">
+            <div class="login-btn">
+                <i class="fa-regular fa-user"></i>
+                <span>Login</span>
+            </div>
+            <button class="contact-btn">Contact Us</button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="logo">
+            <img src="1.png" alt="KAUFA Logo">
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+
+                <li class="dropdown">
+                    Courses <i class="fa-solid fa-caret-down"></i>
+                    <ul class="dropdown-menu">
+                        <li><a href="course.html">Applied Science</a></li>
+                        <li><a href="course.html">Management Studies</a></li>
+                        <li><a href="course.html">Social Science</a></li>
+                        <li><a href="course.html">Technology</a></li>
+                        <li><a href="course.html">Agriculture</a></li>
+                        <li><a href="course.html">Medical & Allied Science</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#blog">Blog</a></li>
+
+                <li class="dropdown">
+                    Contact <i class="fa-solid fa-caret-down"></i>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="tel:+947785771297">Telephone</a></li>
+                        <li><a href="mailto:info@cdi.com">Email</a></li>
+                        <li><a href="#">Location</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Search...">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="results-box" id="resultsBox"></div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="slider">
+
+            <div class="slide active">
+                <img src="https://images.alphacoders.com/932/thumb-1920-932313.jpg" alt="Campus Image 1">
+                <div class="slide-content">
+                    <span>KAUFA University</span>
+                    <h1>Institution of Higher Education</h1>
+                    <p>We believe everyone should have the opportunity to create progress through technology.</p>
+                    <a href="course.html" class="find-course">Find Courses</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://www.ox.ac.uk/sites/files/oxford/styles/ow_medium_feature/s3/field/field_image_main/OUImages_100003_crop2.jpg?itok=IBW966Td"
+                    alt="Campus Image 2">
+                <div class="slide-content">
+                    <span>KAUFA University</span>
+                    <h1>Together we'll explore new things</h1>
+                    <p>We believe everyone should have the opportunity to create progress through technology.</p>
+                    <a href="course.html" class="find-course">Find Courses</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://oxford.tours/wp-content/uploads/2022/09/oxford-university-sunset.jpg"
+                    alt="Campus Image 3">
+                <div class="slide-content">
+                    <span>KAUFA University</span>
+                    <h1>Learn without limits</h1>
+                    <p>Start your learning journey with <b>KAUFA University</b>.</p>
+                    <a href="course.html" class="find-course">Find Courses</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="arrow arrow-left" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <button class="arrow arrow-right" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </section>
+
+    <section id="about">
+        <div class="info-content">
+
+            <div class="education">
+                <i class="fa-solid fa-graduation-cap">&nbsp;Graduation</i>
+                <p>KAUFA University was established and is nationally recognized.</p>
+                <p><a href="course.html">Learn More <i class="fa-solid fa-arrow-right-long"></i></a></p>
+            </div>
+
+            <div class="uni-life">
+                <i class="fa-solid fa-building-columns">&nbsp; University Life</i>
+                <p>Experience a vibrant environment designed to support your academic journey.</p>
+                <p><a href="blog.html">Learn More <i class="fa-solid fa-arrow-right-long"></i></a></p>
+            </div>
+
+            <div class="edu-serv">
+                <i class="fa-solid fa-book"> &nbsp;Education Service</i>
+                <p>We provide high-quality education and student-centered services.</p>
+                <p><a href="course.html">Learn More <i class="fa-solid fa-arrow-right-long"></i></a></p>
+            </div>
+
+        </div>
+
+        <section class="photo-layout">
+
+            <img src="https://wallpaperaccess.com/full/6592911.jpg" alt="large-photo" class="large-photo">
+
+            <div class="right-stack">
+                <img src="https://students.duke.edu/wp-content/uploads/2022/06/Aug22_DI9A4560x-1.jpg" alt="small-photo"
+                    class="small-photo">
+                <img src="https://www.cardiff.ac.uk/__data/assets/image/0018/480015/chemistry-students-in-lecture-theatre.jpeg"
+                    alt="small-photo" class="small-photo">
+            </div>
+
+            <div class="phoyo-content">
+                About KAUFA
+                <p class="topic">Degrees in Various academic Didciplines</p>
+                <p>Not only can university offer an environment rich in our social an cultural experiences.</p>
+                <i class="fa-solid fa-check">Access to all our courses</i>
+                <i class="fa-solid fa-check">Learn the latest skills</i>
+                <i class="fa-solid fa-check">Upskill your organization</i>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>
