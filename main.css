@@ -91,7 +91,7 @@ nav .logo img {
 }
 
 .menu ul li:hover {
-    color: blue;
+    color: #0eb02ccf;
 }
 
 .dropdown i {
@@ -119,7 +119,7 @@ nav .logo img {
 }
 
 .menu .dropdown-menu li:hover {
-    color: #0a5af9;
+    color: #0eb02ccf;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -152,7 +152,7 @@ a {
 }
 
 .search-box input:focus {
-    border-color: blue;
+    border-color: #0eb02ccf;
     width: 250px;
 }
 
@@ -167,7 +167,7 @@ a {
 }
 
 .search-box button:hover {
-    background-color: blue;
+    background-color: #0eb02ccf;
 }
 
 /* Search Results */
@@ -286,7 +286,7 @@ a {
 
 .find-course {
     padding: 12px 24px;
-    background-color: #0000ff;
+    background-color: #0eb02ccf;
     border: none;
     color: white;
     font-size: 18px;
@@ -350,94 +350,219 @@ a {
 .education, .uni-life, .edu-serv{
     margin-top: 20px;
 }
+/* ============================
+   PHOTO LAYOUT SECTION
+============================ */
 
 .photo-layout {
-    display: flex;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 40px;
+    padding: 80px 50px;
     align-items: center;
-    padding: 50px 50px;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
+/* LARGE PHOTO */
+.large-photo {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* RIGHT STACK IMAGES */
 .right-stack {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .small-photo {
-    width: 360px;
-    height: 200px;
+    width: 100%;
+    height: 260px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
-.large-photo {
-    width: 500px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px;
+.photo-content{
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.photo-content h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.photo-content .topic {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #6279a5;
+    font-weight: bold;
+}
+
+.photo-content p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.check-item i {
+    width: 30px;            
+    height: 30px;           
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;     
+    background: #30303052;    
+    color: rgb(7, 110, 3);         
+    font-size: 15px;
+}
+.check-item i:hover{
+    background-color: #09f735cf;
+    color: rgb(0,0,0,);
+}
+
+.read-more{
+    padding: 12px 24px;
+    margin-top: 30px;
+    background-color: #0eb02ccf;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    line-height: 5.6;
+}
+
+.read-more:hover {
+    background-color: #000;
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #f7f8fb;
+    padding: 50px 40px;
+    margin: 50px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.1);
+    gap: 20px;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.top i {
+    font-size: 35px;
+    color: #000;
+}
+
+.top h2 {
+    font-size: 40px;
+    color: #09f735cf;   
+    margin: 0;
+}
+
+.stat-box p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 
 @media (max-width: 900px) {
     .photo-layout {
-        flex-direction: column;
-        gap: 20px;
+        grid-template-columns: 1fr;
     }
 
-    .large-photo {
-        width: 80%;
-        height: auto;
+    .right-stack {
+        flex-direction: row;
     }
 
     .small-photo {
-        width: 60%;
-        height: auto;
+        height: 180px;
+    }
+
+    .large-photo {
+        height: 350px;
     }
 }
 
-/* Mobile size */
 @media (max-width: 550px) {
-    .small-photo {
-        width: 100%;
-        height: auto;
+
+    .photo-layout {
+        padding: 40px 20px;
     }
 
+    .right-stack {
+        flex-direction: column;
+    }
+
+    .small-photo,
     .large-photo {
         width: 100%;
         height: auto;
     }
 
-    .left-stack {
-        width: 100%;
+    .photo-content {
+        text-align: center;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 850px) {
     .search-box input {
