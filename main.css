@@ -21,6 +21,10 @@ header i {
     color: #3f3e3e;
 }
 
+.fa-user:hover {
+    color: blue;
+}
+
 .header-buttons {
     display: flex;
     align-items: center;
@@ -215,9 +219,16 @@ a {
     object-fit: cover;
 }
 
+.slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
 .slide-content {
     position: absolute;
-    bottom: 35%;
+    bottom: 21%;
     left: 5%;
     color: #ffffff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
@@ -233,13 +244,16 @@ a {
 
 .slide-content h1 {
     font-size: 30px;
-    margin: 10px 0;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .slide-content p {
     font-size: 18px;
     opacity: 0.9;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 1.5px;
+
 }
 
 .arrow {
@@ -292,7 +306,7 @@ a {
     justify-content: space-between;
     gap: 30px;
     margin: 50px;
-    background-color: rgba(255, 122, 122, 0.189);
+    background-color: #0eb02c5d;
     text-align: center;
     padding: 60px 40px;
     border-radius: 5px;
@@ -473,6 +487,148 @@ a {
     color: #333;
 }
 
+.top:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.courses-new h3,
+h1 {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.courses-new h3 {
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}
+
+.courses-new h1 {
+    font-size: 35px;
+}
+
+.course-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    padding: 40px 60px;
+    box-sizing: border-box;
+}
+
+.course-image-grid {
+    background: #7a93cd3e;
+    padding: 20px;
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.course-image-grid img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0px 4px 12px rgba(7, 127, 2, 0.5);
+}
+
+.img1 {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.img1:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.course-image-grid h2 {
+    padding-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.course-image-grid p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px 25px 0 0;
+}
+
+.teacher {
+    padding: 70px;
+    gap: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.teacher i {
+    font-size: 40px;
+    background-color: rgba(172, 255, 47, 0.518);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.insdiv{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.insdiv span{
+    font-size: 30px;    
+    font-weight: 600;
+}
+
+.teacher p{
+    padding: 25px;
+    font-size: 17px;
+}
+
+.teacher .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.btn1, .btn2{
+    width: 170px;
+    height: 45px;
+    border: none;
+    background-color: rgba(41, 214, 47, 0.856);
+    border-radius: 10px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn2{
+    background-color: rgba(159, 4, 4, 0.899);
+}
+.btn1:hover, .btn2:hover{
+    background-color: rgba(0, 0, 0, 0.848);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #contact-section {
     display: flex;
     justify-content: space-between;
@@ -485,8 +641,6 @@ a {
 #contact-section img {
     width: 50px;
 }
-
-
 
 #contact-section .content {
     font-weight: lighter;
@@ -552,59 +706,112 @@ a {
     position: relative;
     width: 300px;
     max-width: 100%;
+    border: none;
 }
 
+.input-box {
+    position: relative;
+    width: 100%;
+}
 
 .input-box input {
     width: 100%;
     padding: 10px 60px 10px 12px;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 1px;
-    outline: invert;
-    box-shadow: 4px 4px 4px rgba(0, 128, 0, 0.6);
+    border: 2px solid #ccc;
+    transition: border 0.3s ease-in-out;
+}
+
+.input-box input:focus {
+    outline: none;
+    border-color: green;
 }
 
 .input-box button {
     background: rgba(39, 174, 9, 0.997);
     position: absolute;
-    right: 0.05px;
-    top: 52%;
+    right: 5px;
+    top: 50%;
     transform: translateY(-50%);
     border: none;
     color: white;
-    padding: 10px;
+    padding: 9px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .input-box button:hover {
     background-color: green;
 }
 
+@media (max-width: 900px) {
 
+    .teacher {
+        padding: 40px;
+        flex-direction: column;   
+        gap: 20px;
+        text-align: center;
+    }
 
+    .teacher i {
+        height: 65px;
+        width: 65px;
+        font-size: 24px;
+    }
 
+    .insdiv span {
+        font-size: 24px;
+    }
 
-
-
-
-
-
-
-footer {
-    text-align: center;
-    font-size: 20px;
-    color: #0eb02ca1;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: auto;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.395);
-    padding: 10px;
+    .teacher p {
+        padding: 10px;
+        font-size: 16px;
+    }
 }
 
+@media (max-width: 600px) {
+
+    .teacher {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .insdiv {
+        flex-direction: column;  
+        gap: 10px;
+    }
+
+    .teacher i {
+        height: 60px;
+        width: 60px;
+        font-size: 22px;
+    }
+
+    .insdiv span {
+        font-size: 20px;
+    }
+
+    .teacher p {
+        padding: 25px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .course-image {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-image {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 1024px) {
 
@@ -647,10 +854,6 @@ footer {
         width: 100%;
     }
 }
-
-
-
-
 
 @media (max-width: 768px) {
     .stats-row {
